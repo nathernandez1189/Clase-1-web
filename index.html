@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrega 1 web</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>MI PRIMERA CLASE DE WEB</h1>
+        <img src="logo.png" alt="Logo del proyecto" id="logo">
+    </header>
+
+    <section>
+        <h2>Texto del archivo</h2>
+        <div id="text-content">
+        </div>
+    </section>
+
+    <section>
+        <h2>Video de conejo</h2>
+        <video controls>
+            <source src="conejo.mp4" type="video/mp4">
+            Tu navegador no soporta el video.
+        </video>
+    </section>
+
+    <section>
+        <h2>Audio de Horse</h2>
+        <audio controls>
+            <source src="horse.ogm" type="audio/ogg">
+            Tu navegador no soporta el audio.
+        </audio>
+    </section>
+
+    <footer>
+        <p>Proyecto realizado por: Natalia Hernández</p>
+    </footer>
+
+    <script>
+        fetch('text.txt')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('text-content').innerText = data;
+            });
+    </script>
+</body>
+</html>
